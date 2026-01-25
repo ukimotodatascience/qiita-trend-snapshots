@@ -37,6 +37,13 @@ jobs:
           else
             echo "No new snapshot. Skipping commit."
           fi
+
+      - name: Install pandas
+        run: pip install pandas
+
+      - name: Run build_daily_word_stats
+        run: python scripts/build_daily_word_stats.py
+
       - name: Notify Discord on failure
         if: failure()
         env:
