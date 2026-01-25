@@ -237,15 +237,130 @@ def concat_daily_words(daily_dir: str, out_path: str) -> None:
     print(f"[OK] wrote: {out_path} (rows={len(all_df)})")
 
 
+def build_monthly_words(
+    daily_dir: str | None,
+    daily_all_path: str | None,
+    out_dir: str,
+    out_all_path: str | None,
+) -> None:
+    """
+    日次集計(date, word, count, article_count)を元に、月次集計を作る。
+    - monthly_count = count の合計
+    - monthly_article_count = article_count の合計（※延べ。URL重複排除はできない）
+    - 月ごとに YYYY-MM.csv を出力
+    - out_all_path が指定されれば monthly 全体を1つにまとめたCSVも出す
+    """
+    if (daily_dir is None) == (daily_all_path is None):
+        raise ValueError("Specify exactly one of --daily_dir or --daily_all_path")
+
+    df = pd.read_csv(daily_all_path)
+    # date -> datetime
+    df["date_dt"] = pd.to_datetime(df["date"], errors="raise")
+    df["month"] = df["date_dt"].dt.to_period("M").astype(str)  # "YYYY-MM"
+
+    # 月次集計
+    mdf = (
+        df.groupby(["month", "word"], as_index=False)
+        .agg(
+            count=("count", "sum"),
+            article_count=("article_count", "sum"),
+        )
+        .sort_values(["month", "count", "article_count", "word"], ascending=[True, False, False, True])
+    )
+
+    os.makedirs(out_dir, exist_ok=True)
+
+    # 月ごとに分割して保存
+    for month, g in mdf.groupby("month", sort=True):
+        out_path = os.path.join(out_dir, f"{month}.csv")
+        out_df = g.copy()
+        # out_df.to_csv(out_path, index=False, encoding="utf-8")
+        # print(f"[OK] wrote: {out_path} (rows={len(out_df)})")
+
+    # 全月まとめ
+    if out_all_path:
+        os.makedirs(os.path.dirname(out_all_path) or ".", exist_ok=True)
+        mdf.to_csv(out_all_path, index=False, encoding="utf-8")
+        print(f"[OK] wrote: {out_all_path} (rows={len(mdf)})")
+
+
+def build_yearly_words(
+    daily_dir: str | None,
+    daily_all_path: str | None,
+    out_dir: str,
+    out_all_path: str | None,
+) -> None:
+    """
+    日次集計(date, word, count, article_count)を元に、年次集計を作る。
+    - yearly_count = count の合計
+    - yearly_article_count = article_count の合計（※延べ。URL重複排除はできない）
+    - 年ごとに YYYY.csv を出力
+    - out_all_path が指定されれば yearly 全体を1つにまとめたCSVも出す
+    """
+    if (daily_dir is None) == (daily_all_path is None):
+        raise ValueError("Specify exactly one of --daily_dir or --daily_all_path")
+
+    df = pd.read_csv(daily_all_path)
+
+    df["date_dt"] = pd.to_datetime(df["date"], errors="raise")
+    df["year"] = df["date_dt"].dt.year.astype(str)  # "YYYY"
+
+    ydf = (
+        df.groupby(["year", "word"], as_index=False)
+        .agg(
+            count=("count", "sum"),
+            article_count=("article_count", "sum"),
+        )
+        .sort_values(["year", "count", "article_count", "word"], ascending=[True, False, False, True])
+    )
+
+    os.makedirs(out_dir, exist_ok=True)
+
+    for year, g in ydf.groupby("year", sort=True):
+        out_path = os.path.join(out_dir, f"{year}.csv")
+        out_df = g.copy()
+        # out_df.to_csv(out_path, index=False, encoding="utf-8")
+        # print(f"[OK] wrote: {out_path} (rows={len(out_df)})")
+
+    if out_all_path:
+        os.makedirs(os.path.dirname(out_all_path) or ".", exist_ok=True)
+        ydf.to_csv(out_all_path, index=False, encoding="utf-8")
+        print(f"[OK] wrote: {out_all_path} (rows={len(ydf)})")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--daily_dir", default="data/daily_words", help="directory containing daily CSVs")
-    ap.add_argument("--out_path", default="data/daily_words/daily_words_all.csv", help="output CSV path")
+    ap.add_argument("--snapshot_dir", default="data/snapshots", help="directory containing snapshot CSVs")
+    ap.add_argument("--daily_dir", default="data/frequencies", help="directory containing daily CSVs")
+    ap.add_argument("--out_path", default="data/frequencies/summary/daily_words_all.csv", help="output CSV path")
     args = ap.parse_args()
 
+    # 1. スナップショットから日次単語CSVを生成（存在する場合）
+    snapshot_paths = glob.glob(os.path.join(args.snapshot_dir, "*.csv"))
+    if snapshot_paths:
+        build_daily_words(
+            snapshot_dir=args.snapshot_dir,
+            out_dir=args.daily_dir,
+        )
+
+    # 2. 日次CSVを縦結合
     concat_daily_words(
         daily_dir=args.daily_dir,
         out_path=args.out_path,
+    )
+
+    build_monthly_words(
+        daily_dir=None,
+        daily_all_path=args.out_path,
+        out_dir="data/frequencies/summary",
+        out_all_path="data/frequencies/summary/monthly_words_all.csv",
+    )
+
+    build_yearly_words(
+        daily_dir=None,
+        daily_all_path=args.out_path,
+        out_dir="data/frequencies/summary",
+        out_all_path="data/frequencies/summary/yearly_words_all.csv",
     )
 
 
