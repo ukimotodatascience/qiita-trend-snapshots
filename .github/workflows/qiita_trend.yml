@@ -2,8 +2,8 @@ name: Fetch Qiita Popular Feed
 
 on:
   schedule:
-    - cron: "0 0 * * *"    # 09:00 JST
-    - cron: "0 12 * * *"   # 21:00 JST
+    - cron: "0 21 * * *"    # 06:00 JST
+    - cron: "0 9 * * *"   # 18:00 JST
   workflow_dispatch: {}
 
 permissions:
