@@ -7,7 +7,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 # --- 設定 ---
-DEFAULT_CSV_PATH = "data/daily_words/daily_words_all.csv"
+DEFAULT_CSV_PATH = "data/frequencies/summary/daily_words_all.csv"
 
 # まずは repo 内のフォントを優先（あなたのコードを踏襲）
 CANDIDATE_FONTS = [
