@@ -274,8 +274,6 @@ def build_monthly_words(
     for month, g in mdf.groupby("month", sort=True):
         out_path = os.path.join(out_dir, f"{month}.csv")
         out_df = g.copy()
-        # out_df.to_csv(out_path, index=False, encoding="utf-8")
-        # print(f"[OK] wrote: {out_path} (rows={len(out_df)})")
 
     # 全月まとめ
     if out_all_path:
@@ -319,8 +317,6 @@ def build_yearly_words(
     for year, g in ydf.groupby("year", sort=True):
         out_path = os.path.join(out_dir, f"{year}.csv")
         out_df = g.copy()
-        # out_df.to_csv(out_path, index=False, encoding="utf-8")
-        # print(f"[OK] wrote: {out_path} (rows={len(out_df)})")
 
     if out_all_path:
         os.makedirs(os.path.dirname(out_all_path) or ".", exist_ok=True)
