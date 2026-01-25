@@ -4,7 +4,7 @@ from urllib.request import urlopen
 import xml.etree.ElementTree as ET
 
 FEED_URL = "https://qiita.com/popular-items/feed"
-OUT_DIR = "data"
+OUT_DIR = "../data"
 
 ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
 
