@@ -1,44 +1,3 @@
-# import os
-# from pathlib import Path
-# import pandas as pd
-# from wordcloud import WordCloud
-# import matplotlib.pyplot as plt
-
-# CSV_PATH = "data/daily_words/daily_words_all.csv"
-
-# # Windowsならまずこのどれかが当たりやすい
-# CANDIDATE_FONTS = [
-#     r"font/meiryo.ttc",  # メイリオ
-# ]
-
-# FONT_PATH = next((p for p in CANDIDATE_FONTS if Path(p).exists()), None)
-# if FONT_PATH is None:
-#     raise FileNotFoundError(
-#         "日本語フォントが見つかりませんでした。CANDIDATE_FONTS にフォントパスを追加してください。"
-#     )
-
-# df = pd.read_csv(CSV_PATH)
-# freq = dict(zip(df["word"].astype(str), df["count"].astype(int)))
-
-# wc = WordCloud(
-#     width=1200,
-#     height=600,
-#     background_color="white",
-#     collocations=False,
-#     font_path=FONT_PATH,  # ← ここが重要
-# ).generate_from_frequencies(freq)
-
-# plt.figure(figsize=(12, 6))
-# plt.imshow(wc, interpolation="bilinear")
-# plt.axis("off")
-# plt.tight_layout()
-# plt.show()
-
-# out_path = "wordcloud_2026-01-25.png"
-# wc.to_file(out_path)
-# print("saved:", os.path.abspath(out_path))
-# print("font:", FONT_PATH)
-
 import os
 from pathlib import Path
 
@@ -52,9 +11,7 @@ DEFAULT_CSV_PATH = "data/daily_words/daily_words_all.csv"
 
 # まずは repo 内のフォントを優先（あなたのコードを踏襲）
 CANDIDATE_FONTS = [
-    r"font/meiryo.ttc",  # 例: リポジトリに同梱している場合
-    # ここに他の候補も追加OK
-    # r"font/NotoSansCJKjp-Regular.otf",
+    r"font/meiryo.ttc",
 ]
 
 
@@ -85,10 +42,12 @@ def make_wordcloud(freq: dict[str, int], font_path: str) -> WordCloud:
 
 
 # --- UI ---
+# --- UI ---
 st.set_page_config(page_title="WordCloud Viewer", layout="wide")
 st.title("WordCloud（CSVの頻度から生成）")
 
-csv_path = st.text_input("CSV_PATH", DEFAULT_CSV_PATH)
+# CSVパスはコード内で固定（UIには表示しない）
+csv_path = DEFAULT_CSV_PATH
 
 font_path = find_font_path()
 if font_path is None:
@@ -100,7 +59,7 @@ if font_path is None:
 st.caption(f"font: `{font_path}`")
 
 if not Path(csv_path).exists():
-    st.error(f"CSVが見つかりません: {csv_path}")
+    st.error("内部CSVが見つかりません。データ生成処理を確認してください。")
     st.stop()
 
 freq = load_freq(csv_path)
