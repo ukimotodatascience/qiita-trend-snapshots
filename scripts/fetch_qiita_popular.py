@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[1]   # scripts/ の1つ上
+REPO_ROOT = Path(__file__).resolve().parents[1]  # scripts/ の1つ上
 OUT_DIR = REPO_ROOT / "data" / "snapshots"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -17,10 +17,6 @@ ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
 def sanitize_timestamp(ts: str) -> str:
     # ファイル名に使えない ":" を "-" に
     return ts.replace(":", "-")
-
-
-def ensure_dir(path: str):
-    os.makedirs(path, exist_ok=True)
 
 
 def main():
@@ -45,8 +41,6 @@ def main():
         return
 
     entries = root.findall("atom:entry", ATOM_NS)
-
-    ensure_dir(OUT_DIR)
 
     with open(out_path, "w", newline="", encoding="utf-8") as f:
         fieldnames = ["feed_updated_at", "title", "url"]
