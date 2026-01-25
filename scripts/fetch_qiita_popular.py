@@ -3,8 +3,13 @@ import os
 from urllib.request import urlopen
 import xml.etree.ElementTree as ET
 
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]   # scripts/ の1つ上
+OUT_DIR = REPO_ROOT / "data" / "snapshots"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
 FEED_URL = "https://qiita.com/popular-items/feed"
-OUT_DIR = "../data"
 
 ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
 
