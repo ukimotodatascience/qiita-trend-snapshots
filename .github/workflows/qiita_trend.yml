@@ -55,5 +55,5 @@ jobs:
           REF: ${{ github.ref_name }}
         run: |
           RUN_URL="https://github.com/${REPO}/actions/runs/${RUN_ID}"
-          MSG="✖ **Workflow Failed:**\n- repo: ${REPO}\n- workflow: ${WORKFFLOW}\n- branch: ${REF}\n- run: ${RUN_URL}"
+          MSG="✖ **Workflow Failed:**\n- repo: ${REPO}\n- workflow: ${WORKFLOW}\n- branch: ${REF}\n- run: ${RUN_URL}"
           curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"${MSG}\"}" ${{ env.DISCORD_WEBHOOK_URL }}
