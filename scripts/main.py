@@ -62,13 +62,12 @@ def render_top10_bar(
     freq: dict[str, int],
     font_path: str,
     *,
-    use_container_width: bool = True,
     fig_size: tuple[float, float],
     dpi: int,
-) -> None:
+) -> plt.Figure | None:
     if not freq:
         st.info("データがありません。")
-        return
+        return None
 
     top10 = (
         pd.DataFrame([{"word": word, "count": count} for word, count in freq.items()])
@@ -85,7 +84,15 @@ def render_top10_bar(
     ax.tick_params(axis="y", labelsize=10)
     for label in ax.get_yticklabels():
         label.set_fontproperties(font_prop)
-    st.pyplot(fig, use_container_width=use_container_width)
+    return fig
+
+
+def fig_to_png_bytes(fig: plt.Figure) -> bytes:
+    import io
+
+    buf = io.BytesIO()
+    fig.savefig(buf, format="png", bbox_inches="tight")
+    return buf.getvalue()
 
 
 # --- UI ---
@@ -211,24 +218,29 @@ st.subheader("出現回数TOP10")
 if st.session_state.show_compare:
     left_col, right_col = st.columns(2)
     with left_col:
-        render_top10_bar(
+        fig = render_top10_bar(
             current_freq,
             font_path,
             fig_size=BAR_FIGSIZE,
             dpi=BAR_DPI,
         )
+        if fig is not None:
+            st.pyplot(fig, use_container_width=True)
     with right_col:
-        render_top10_bar(
+        fig = render_top10_bar(
             prev_freq,
             font_path,
             fig_size=BAR_FIGSIZE,
             dpi=BAR_DPI,
         )
+        if fig is not None:
+            st.pyplot(fig, use_container_width=True)
 else:
-    render_top10_bar(
+    fig = render_top10_bar(
         current_freq,
         font_path,
-        use_container_width=False,
         fig_size=BAR_FIGSIZE,
         dpi=BAR_DPI,
     )
+    if fig is not None:
+        st.image(fig_to_png_bytes(fig), width=WC_WIDTH)
