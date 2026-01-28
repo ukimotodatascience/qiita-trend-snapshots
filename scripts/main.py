@@ -69,7 +69,7 @@ period_days = period_options[period_label]
 if "show_compare" not in st.session_state:
     st.session_state.show_compare = False
 
-if st.button("比較する"):
+if st.button("前の期間と比較する"):
     st.session_state.show_compare = True
 
 # CSVパスはコード内で固定（UIには表示しない）
