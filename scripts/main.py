@@ -60,7 +60,7 @@ def make_wordcloud(freq: dict[str, int], font_path: str) -> WordCloud:
 # --- UI ---
 # --- UI ---
 st.set_page_config(page_title="WordCloud Viewer", layout="wide")
-st.title("WordCloud（CSVの頻度から生成）")
+st.title("Qiitaトレンド記事ワードクラウド")
 
 period_options = {
     "直近1週間": 7,
@@ -139,10 +139,6 @@ st.caption(f"データ期間: {format_date_range(data_start, data_end)}")
 if st.session_state.show_compare:
     left_col, right_col = st.columns(2)
     with left_col:
-        current_range = format_date_range(
-            max(current_start, data_start), min(current_end, data_end)
-        )
-        st.subheader(f"現在の期間: {current_range}")
         if current_wc is None:
             st.info("現在の期間のデータがありません。")
         else:
@@ -152,10 +148,6 @@ if st.session_state.show_compare:
             st.pyplot(fig, clear_figure=True)
 
     with right_col:
-        prev_range = format_date_range(
-            max(prev_start, data_start), min(prev_end, data_end)
-        )
-        st.subheader(f"前の期間: {prev_range}")
         if prev_wc is None:
             st.info("前の期間のデータがありません。")
         else:
@@ -164,10 +156,6 @@ if st.session_state.show_compare:
             plt.axis("off")
             st.pyplot(fig, clear_figure=True)
 else:
-    current_range = format_date_range(
-        max(current_start, data_start), min(current_end, data_end)
-    )
-    st.subheader(f"現在の期間: {current_range}")
     if current_wc is None:
         st.info("現在の期間のデータがありません。")
     else:
