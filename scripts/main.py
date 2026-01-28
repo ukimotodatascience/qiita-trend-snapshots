@@ -48,8 +48,8 @@ def format_date_range(start: pd.Timestamp, end: pd.Timestamp) -> str:
 
 def make_wordcloud(freq: dict[str, int], font_path: str) -> WordCloud:
     wc = WordCloud(
-        width=900,
-        height=450,
+        width=700,
+        height=350,
         background_color="white",
         collocations=False,
         font_path=font_path,
@@ -114,8 +114,8 @@ prev_freq = load_freq(csv_path, prev_start, prev_end)
 current_wc = None
 if current_freq:
     current_wc = WordCloud(
-        width=900,
-        height=450,
+        width=700,
+        height=350,
         background_color="white",
         collocations=False,
         font_path=font_path,
@@ -125,8 +125,8 @@ if current_freq:
 prev_wc = None
 if st.session_state.show_compare and prev_freq:
     prev_wc = WordCloud(
-        width=900,
-        height=450,
+        width=700,
+        height=350,
         background_color="white",
         collocations=False,
         font_path=font_path,
@@ -142,27 +142,18 @@ if st.session_state.show_compare:
         if current_wc is None:
             st.info("現在の期間のデータがありません。")
         else:
-            fig = plt.figure(figsize=(900 / 200, 450 / 200))
-            plt.imshow(current_wc, interpolation="bilinear")
-            plt.axis("off")
-            st.pyplot(fig, clear_figure=True)
+            st.image(current_wc.to_array(), use_container_width=True)
 
     with right_col:
         if prev_wc is None:
             st.info("前の期間のデータがありません。")
         else:
-            fig = plt.figure(figsize=(900 / 200, 450 / 200))
-            plt.imshow(prev_wc, interpolation="bilinear")
-            plt.axis("off")
-            st.pyplot(fig, clear_figure=True)
+            st.image(prev_wc.to_array(), use_container_width=True)
 else:
     if current_wc is None:
         st.info("現在の期間のデータがありません。")
     else:
-        fig = plt.figure(figsize=(900 / 200, 450 / 200))
-        plt.imshow(current_wc, interpolation="bilinear")
-        plt.axis("off")
-        st.pyplot(fig, clear_figure=True)
+        st.image(current_wc.to_array(), use_container_width=True)
 
 # ダウンロード（PNG）
 if current_wc is not None:
