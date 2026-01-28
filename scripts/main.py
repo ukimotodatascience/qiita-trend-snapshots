@@ -66,6 +66,12 @@ period_options = {
 period_label = st.radio("期間", list(period_options.keys()), horizontal=True)
 period_days = period_options[period_label]
 
+if "show_compare" not in st.session_state:
+    st.session_state.show_compare = False
+
+if st.button("比較する"):
+    st.session_state.show_compare = True
+
 # CSVパスはコード内で固定（UIには表示しない）
 csv_path = DEFAULT_CSV_PATH
 
@@ -102,7 +108,7 @@ if current_freq:
     ).generate_from_frequencies(current_freq)
 
 prev_wc = None
-if prev_freq:
+if st.session_state.show_compare and prev_freq:
     prev_wc = WordCloud(
         width=1200,
         height=600,
@@ -113,24 +119,34 @@ if prev_freq:
     ).generate_from_frequencies(prev_freq)
 
 # 表示（matplotlib）
-left_col, right_col = st.columns(2)
-with left_col:
+if st.session_state.show_compare:
+    left_col, right_col = st.columns(2)
+    with left_col:
+        st.subheader(f"現在の期間: {current_start.date()} 〜 {current_end.date()}")
+        if current_wc is None:
+            st.info("現在の期間のデータがありません。")
+        else:
+            fig = plt.figure(figsize=(1200 / 200, 600 / 200))
+            plt.imshow(current_wc, interpolation="bilinear")
+            plt.axis("off")
+            st.pyplot(fig, clear_figure=True)
+
+    with right_col:
+        st.subheader(f"前の期間: {prev_start.date()} 〜 {prev_end.date()}")
+        if prev_wc is None:
+            st.info("前の期間のデータがありません。")
+        else:
+            fig = plt.figure(figsize=(1200 / 200, 600 / 200))
+            plt.imshow(prev_wc, interpolation="bilinear")
+            plt.axis("off")
+            st.pyplot(fig, clear_figure=True)
+else:
     st.subheader(f"現在の期間: {current_start.date()} 〜 {current_end.date()}")
     if current_wc is None:
         st.info("現在の期間のデータがありません。")
     else:
         fig = plt.figure(figsize=(1200 / 200, 600 / 200))
         plt.imshow(current_wc, interpolation="bilinear")
-        plt.axis("off")
-        st.pyplot(fig, clear_figure=True)
-
-with right_col:
-    st.subheader(f"前の期間: {prev_start.date()} 〜 {prev_end.date()}")
-    if prev_wc is None:
-        st.info("前の期間のデータがありません。")
-    else:
-        fig = plt.figure(figsize=(1200 / 200, 600 / 200))
-        plt.imshow(prev_wc, interpolation="bilinear")
         plt.axis("off")
         st.pyplot(fig, clear_figure=True)
 
