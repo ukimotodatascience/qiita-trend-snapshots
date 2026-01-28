@@ -58,6 +58,29 @@ def make_wordcloud(freq: dict[str, int], font_path: str) -> WordCloud:
     return wc
 
 
+def render_top10_bar(freq: dict[str, int], font_path: str) -> None:
+    if not freq:
+        st.info("データがありません。")
+        return
+
+    top10 = (
+        pd.DataFrame([{"word": word, "count": count} for word, count in freq.items()])
+        .sort_values("count", ascending=False)
+        .head(10)
+    )
+
+    font_prop = font_manager.FontProperties(fname=font_path)
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.barh(top10["word"], top10["count"], color="#4C78A8")
+    ax.invert_yaxis()
+    ax.set_xlabel("出現回数", fontproperties=font_prop)
+    ax.set_ylabel("ワード", fontproperties=font_prop)
+    ax.tick_params(axis="y", labelsize=10)
+    for label in ax.get_yticklabels():
+        label.set_fontproperties(font_prop)
+    st.pyplot(fig, use_container_width=True)
+
+
 # --- UI ---
 # --- UI ---
 st.set_page_config(page_title="WordCloud Viewer", layout="wide")
@@ -171,23 +194,12 @@ if current_wc is not None:
     )
 
 # --- TOP10 横棒グラフ ---
-if current_freq:
-    st.subheader("出現回数TOP10")
-    top10 = (
-        pd.DataFrame(
-            [{"word": word, "count": count} for word, count in current_freq.items()]
-        )
-        .sort_values("count", ascending=False)
-        .head(10)
-    )
-
-    font_prop = font_manager.FontProperties(fname=font_path)
-    fig, ax = plt.subplots(figsize=(8, 4))
-    ax.barh(top10["word"], top10["count"], color="#4C78A8")
-    ax.invert_yaxis()
-    ax.set_xlabel("出現回数", fontproperties=font_prop)
-    ax.set_ylabel("ワード", fontproperties=font_prop)
-    ax.tick_params(axis="y", labelsize=10)
-    for label in ax.get_yticklabels():
-        label.set_fontproperties(font_prop)
-    st.pyplot(fig, use_container_width=True)
+st.subheader("出現回数TOP10")
+if st.session_state.show_compare:
+    left_col, right_col = st.columns(2)
+    with left_col:
+        render_top10_bar(current_freq, font_path)
+    with right_col:
+        render_top10_bar(prev_freq, font_path)
+else:
+    render_top10_bar(current_freq, font_path)
