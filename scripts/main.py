@@ -56,8 +56,6 @@ if font_path is None:
     )
     st.stop()
 
-st.caption(f"font: `{font_path}`")
-
 if not Path(csv_path).exists():
     st.error("内部CSVが見つかりません。データ生成処理を確認してください。")
     st.stop()
