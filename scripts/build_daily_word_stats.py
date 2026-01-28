@@ -48,6 +48,18 @@ def load_stopwords(path: str | None) -> Set[str]:
     return sw
 
 
+def try_sudachipy():
+    """
+    SudachiPyが利用可能な場合はTokenizerとSplitModeを返す。
+    """
+    try:
+        from sudachipy import dictionary, tokenizer  # type: ignore
+
+        return dictionary.Dictionary().create(), tokenizer.Tokenizer.SplitMode.C
+    except Exception:
+        return None
+
+
 def try_janome():
     """
     Janomeが利用可能な場合は、JanomeのTokenizerを返し、そうでない場合はNoneを返す。
@@ -90,9 +102,26 @@ def tokenize_title(
     """
     title = normalize_text(title)
 
-    tk = try_janome()
     tokens: List[Tuple[str, float]] = []
 
+    sudachi = try_sudachipy()
+    if sudachi is not None:
+        sudachi_tokenizer, split_mode = sudachi
+        for t in sudachi_tokenizer.tokenize(title, split_mode):
+            pos = t.part_of_speech()[0] if t.part_of_speech() else ""
+            if pos != "名詞":
+                continue
+            w = normalize_text(t.surface()).lower()
+            if len(w) < min_len:
+                continue
+            if w in stopwords:
+                continue
+            weight = EN_WEIGHT if _is_english_token(w) else JP_WEIGHT
+            tokens.append((w, weight))
+        if tokens:
+            return tokens
+
+    tk = try_janome()
     if tk is not None:
         # Janome: keep nouns only to avoid noisy particles
         for t in tk.tokenize(title):
