@@ -90,49 +90,60 @@ current_freq = load_freq(csv_path, current_start, current_end)
 prev_freq = load_freq(csv_path, prev_start, prev_end)
 
 # WordCloud生成（固定値）
-current_wc = WordCloud(
-    width=1200,
-    height=600,
-    background_color="white",
-    collocations=False,
-    font_path=font_path,
-    max_words=200,
-).generate_from_frequencies(current_freq)
+current_wc = None
+if current_freq:
+    current_wc = WordCloud(
+        width=1200,
+        height=600,
+        background_color="white",
+        collocations=False,
+        font_path=font_path,
+        max_words=200,
+    ).generate_from_frequencies(current_freq)
 
-prev_wc = WordCloud(
-    width=1200,
-    height=600,
-    background_color="white",
-    collocations=False,
-    font_path=font_path,
-    max_words=200,
-).generate_from_frequencies(prev_freq)
+prev_wc = None
+if prev_freq:
+    prev_wc = WordCloud(
+        width=1200,
+        height=600,
+        background_color="white",
+        collocations=False,
+        font_path=font_path,
+        max_words=200,
+    ).generate_from_frequencies(prev_freq)
 
 # 表示（matplotlib）
 left_col, right_col = st.columns(2)
 with left_col:
     st.subheader(f"現在の期間: {current_start.date()} 〜 {current_end.date()}")
-    fig = plt.figure(figsize=(1200 / 200, 600 / 200))
-    plt.imshow(current_wc, interpolation="bilinear")
-    plt.axis("off")
-    st.pyplot(fig, clear_figure=True)
+    if current_wc is None:
+        st.info("現在の期間のデータがありません。")
+    else:
+        fig = plt.figure(figsize=(1200 / 200, 600 / 200))
+        plt.imshow(current_wc, interpolation="bilinear")
+        plt.axis("off")
+        st.pyplot(fig, clear_figure=True)
 
 with right_col:
     st.subheader(f"前の期間: {prev_start.date()} 〜 {prev_end.date()}")
-    fig = plt.figure(figsize=(1200 / 200, 600 / 200))
-    plt.imshow(prev_wc, interpolation="bilinear")
-    plt.axis("off")
-    st.pyplot(fig, clear_figure=True)
+    if prev_wc is None:
+        st.info("前の期間のデータがありません。")
+    else:
+        fig = plt.figure(figsize=(1200 / 200, 600 / 200))
+        plt.imshow(prev_wc, interpolation="bilinear")
+        plt.axis("off")
+        st.pyplot(fig, clear_figure=True)
 
 # ダウンロード（PNG）
-img_bytes = current_wc.to_image()
-import io
+if current_wc is not None:
+    img_bytes = current_wc.to_image()
+    import io
 
-buf = io.BytesIO()
-img_bytes.save(buf, format="PNG")
-st.download_button(
-    "PNGをダウンロード",
-    data=buf.getvalue(),
-    file_name="wordcloud.png",
-    mime="image/png",
-)
+    buf = io.BytesIO()
+    img_bytes.save(buf, format="PNG")
+    st.download_button(
+        "PNGをダウンロード",
+        data=buf.getvalue(),
+        file_name="wordcloud.png",
+        mime="image/png",
+    )
