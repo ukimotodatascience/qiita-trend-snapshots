@@ -63,7 +63,8 @@ def render_top10_bar(
     font_path: str,
     *,
     use_container_width: bool = True,
-    fig_size: tuple[float, float] = (8, 4),
+    fig_size: tuple[float, float],
+    dpi: int,
 ) -> None:
     if not freq:
         st.info("データがありません。")
@@ -76,7 +77,7 @@ def render_top10_bar(
     )
 
     font_prop = font_manager.FontProperties(fname=font_path)
-    fig, ax = plt.subplots(figsize=fig_size)
+    fig, ax = plt.subplots(figsize=fig_size, dpi=dpi)
     ax.barh(top10["word"], top10["count"], color="#4C78A8")
     ax.invert_yaxis()
     ax.set_xlabel("出現回数", fontproperties=font_prop)
@@ -143,6 +144,8 @@ prev_freq = load_freq(csv_path, prev_start, prev_end)
 
 WC_WIDTH = 700
 WC_HEIGHT = 350
+BAR_DPI = 100
+BAR_FIGSIZE = (WC_WIDTH / BAR_DPI, WC_HEIGHT / BAR_DPI)
 
 # WordCloud生成（固定値）
 current_wc = None
@@ -208,13 +211,24 @@ st.subheader("出現回数TOP10")
 if st.session_state.show_compare:
     left_col, right_col = st.columns(2)
     with left_col:
-        render_top10_bar(current_freq, font_path)
+        render_top10_bar(
+            current_freq,
+            font_path,
+            fig_size=BAR_FIGSIZE,
+            dpi=BAR_DPI,
+        )
     with right_col:
-        render_top10_bar(prev_freq, font_path)
+        render_top10_bar(
+            prev_freq,
+            font_path,
+            fig_size=BAR_FIGSIZE,
+            dpi=BAR_DPI,
+        )
 else:
     render_top10_bar(
         current_freq,
         font_path,
         use_container_width=False,
-        fig_size=(7, 4),
+        fig_size=BAR_FIGSIZE,
+        dpi=BAR_DPI,
     )
