@@ -69,12 +69,19 @@ period_days = period_options[period_label]
 if "show_compare" not in st.session_state:
     st.session_state.show_compare = False
 
+
+def enable_compare() -> None:
+    st.session_state.show_compare = True
+
+
+def reset_compare() -> None:
+    st.session_state.show_compare = False
+
+
 if st.session_state.show_compare:
-    if st.button("比較をリセット"):
-        st.session_state.show_compare = False
+    st.button("比較をリセット", on_click=reset_compare)
 else:
-    if st.button("前の期間と比較する"):
-        st.session_state.show_compare = True
+    st.button("前の期間と比較する", on_click=enable_compare)
 
 # CSVパスはコード内で固定（UIには表示しない）
 csv_path = DEFAULT_CSV_PATH
