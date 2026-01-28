@@ -70,6 +70,7 @@ streamlit run scripts/main.py
 - ワードクラウド（指定期間/比較表示）
 - 出現回数TOP10（横棒グラフ）
 - PNGとしてダウンロード可能
+<img width="1196" height="947" alt="image" src="https://github.com/user-attachments/assets/d3316790-4b82-45ce-a017-d8bfcf39b4d0" />
 
 ## ✅ こんな用途におすすめ
 
