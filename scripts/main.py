@@ -23,16 +23,23 @@ def find_font_path() -> str | None:
 
 
 @st.cache_data
-def load_freq(csv_path: str, days: int) -> dict[str, int]:
+def load_freq(
+    csv_path: str, start_date: pd.Timestamp, end_date: pd.Timestamp
+) -> dict[str, int]:
     df = pd.read_csv(csv_path)
     df["date"] = pd.to_datetime(df["date"])
-    latest_date = df["date"].max()
-    start_date = latest_date - pd.Timedelta(days=days - 1)
-    df = df[df["date"] >= start_date]
+    df = df[(df["date"] >= start_date) & (df["date"] <= end_date)]
     # 想定: date, word, count
     grouped = df.groupby("word", as_index=False)["count"].sum()
     freq = dict(zip(grouped["word"].astype(str), grouped["count"].astype(int)))
     return freq
+
+
+@st.cache_data
+def load_latest_date(csv_path: str) -> pd.Timestamp:
+    df = pd.read_csv(csv_path, usecols=["date"])
+    df["date"] = pd.to_datetime(df["date"])
+    return df["date"].max()
 
 
 def make_wordcloud(freq: dict[str, int], font_path: str) -> WordCloud:
@@ -73,26 +80,52 @@ if not Path(csv_path).exists():
     st.error("内部CSVが見つかりません。データ生成処理を確認してください。")
     st.stop()
 
-freq = load_freq(csv_path, period_days)
+latest_date = load_latest_date(csv_path)
+current_start = latest_date - pd.Timedelta(days=period_days - 1)
+current_end = latest_date
+prev_end = current_start - pd.Timedelta(days=1)
+prev_start = prev_end - pd.Timedelta(days=period_days - 1)
+
+current_freq = load_freq(csv_path, current_start, current_end)
+prev_freq = load_freq(csv_path, prev_start, prev_end)
 
 # WordCloud生成（固定値）
-wc = WordCloud(
+current_wc = WordCloud(
     width=1200,
     height=600,
     background_color="white",
     collocations=False,
     font_path=font_path,
     max_words=200,
-).generate_from_frequencies(freq)
+).generate_from_frequencies(current_freq)
+
+prev_wc = WordCloud(
+    width=1200,
+    height=600,
+    background_color="white",
+    collocations=False,
+    font_path=font_path,
+    max_words=200,
+).generate_from_frequencies(prev_freq)
 
 # 表示（matplotlib）
-fig = plt.figure(figsize=(1200 / 200, 600 / 200))
-plt.imshow(wc, interpolation="bilinear")
-plt.axis("off")
-st.pyplot(fig, clear_figure=True)
+left_col, right_col = st.columns(2)
+with left_col:
+    st.subheader(f"現在の期間: {current_start.date()} 〜 {current_end.date()}")
+    fig = plt.figure(figsize=(1200 / 200, 600 / 200))
+    plt.imshow(current_wc, interpolation="bilinear")
+    plt.axis("off")
+    st.pyplot(fig, clear_figure=True)
+
+with right_col:
+    st.subheader(f"前の期間: {prev_start.date()} 〜 {prev_end.date()}")
+    fig = plt.figure(figsize=(1200 / 200, 600 / 200))
+    plt.imshow(prev_wc, interpolation="bilinear")
+    plt.axis("off")
+    st.pyplot(fig, clear_figure=True)
 
 # ダウンロード（PNG）
-img_bytes = wc.to_image()
+img_bytes = current_wc.to_image()
 import io
 
 buf = io.BytesIO()
