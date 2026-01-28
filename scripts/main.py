@@ -135,12 +135,15 @@ prev_start = prev_end - pd.Timedelta(days=period_days - 1)
 current_freq = load_freq(csv_path, current_start, current_end)
 prev_freq = load_freq(csv_path, prev_start, prev_end)
 
+WC_WIDTH = 700
+WC_HEIGHT = 350
+
 # WordCloud生成（固定値）
 current_wc = None
 if current_freq:
     current_wc = WordCloud(
-        width=700,
-        height=350,
+        width=WC_WIDTH,
+        height=WC_HEIGHT,
         background_color="white",
         collocations=False,
         font_path=font_path,
@@ -150,8 +153,8 @@ if current_freq:
 prev_wc = None
 if st.session_state.show_compare and prev_freq:
     prev_wc = WordCloud(
-        width=700,
-        height=350,
+        width=WC_WIDTH,
+        height=WC_HEIGHT,
         background_color="white",
         collocations=False,
         font_path=font_path,
@@ -178,7 +181,7 @@ else:
     if current_wc is None:
         st.info("現在の期間のデータがありません。")
     else:
-        st.image(current_wc.to_array(), use_container_width=True)
+        st.image(current_wc.to_array(), width=WC_WIDTH)
 
 # ダウンロード（PNG）
 if current_wc is not None:
