@@ -64,24 +64,18 @@ if not Path(csv_path).exists():
 
 freq = load_freq(csv_path)
 
-# オプション（必要なら）
-with st.expander("表示オプション", expanded=False):
-    max_words = st.slider("最大単語数", 50, 400, 200, 10)
-    width = st.slider("幅", 600, 2000, 1200, 50)
-    height = st.slider("高さ", 300, 1200, 600, 50)
-
-# WordCloud生成
+# WordCloud生成（固定値）
 wc = WordCloud(
-    width=width,
-    height=height,
+    width=1200,
+    height=600,
     background_color="white",
     collocations=False,
     font_path=font_path,
-    max_words=max_words,
+    max_words=200,
 ).generate_from_frequencies(freq)
 
 # 表示（matplotlib）
-fig = plt.figure(figsize=(width / 200, height / 200))
+fig = plt.figure(figsize=(1200 / 200, 600 / 200))
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
 st.pyplot(fig, clear_figure=True)
