@@ -5,6 +5,7 @@ import pandas as pd
 import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 
 # --- 設定 ---
 DEFAULT_CSV_PATH = "data/frequencies/summary/daily_words_all.csv"
@@ -180,9 +181,13 @@ if current_freq:
         .head(10)
     )
 
+    font_prop = font_manager.FontProperties(fname=font_path)
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.barh(top10["word"], top10["count"], color="#4C78A8")
     ax.invert_yaxis()
-    ax.set_xlabel("出現回数")
-    ax.set_ylabel("ワード")
+    ax.set_xlabel("出現回数", fontproperties=font_prop)
+    ax.set_ylabel("ワード", fontproperties=font_prop)
+    ax.tick_params(axis="y", labelsize=10)
+    for label in ax.get_yticklabels():
+        label.set_fontproperties(font_prop)
     st.pyplot(fig, use_container_width=True)
