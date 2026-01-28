@@ -20,8 +20,13 @@ import pandas as pd
 # ----------------------------
 # Tokenizer (Janome if available; otherwise regex fallback)
 # ----------------------------
-_JP_SEQ = re.compile(r"[ぁ-んァ-ヶ一-龠]+")
+_JP_SEQ = re.compile(r"[ぁ-んァ-ヶ一-龠々ー]+")
+_JP_SUBTOKEN = re.compile(r"[一-龠々]+|[ァ-ヶー]+|[ぁ-ん]{2,}")
 _EN_SEQ = re.compile(r"[A-Za-z][A-Za-z0-9_\-+./]*")
+
+# 英語/日本語の重み（お任せ指定のためデフォルトを設定）
+EN_WEIGHT = 0.7
+JP_WEIGHT = 1.0
 
 
 def load_stopwords(path: str | None) -> Set[str]:
@@ -49,6 +54,7 @@ def try_janome():
     """
     try:
         from janome.tokenizer import Tokenizer  # type: ignore
+
         return Tokenizer()
     except Exception:
         return None
@@ -63,7 +69,19 @@ def normalize_text(s: str) -> str:
     return s.strip()
 
 
-def tokenize_title(title: str, stopwords: Set[str], min_len: int = 2) -> List[str]:
+def _is_english_token(token: str) -> bool:
+    return _EN_SEQ.fullmatch(token) is not None
+
+
+def _split_jp_token(token: str) -> List[str]:
+    return [m.group(0) for m in _JP_SUBTOKEN.finditer(token)]
+
+
+def tokenize_title(
+    title: str,
+    stopwords: Set[str],
+    min_len: int = 2,
+) -> List[Tuple[str, float]]:
     """
     記事タイトルを単語リストに分割する。
     - Janome が使える場合は名詞のみ抽出
@@ -73,7 +91,7 @@ def tokenize_title(title: str, stopwords: Set[str], min_len: int = 2) -> List[st
     title = normalize_text(title)
 
     tk = try_janome()
-    tokens: List[str] = []
+    tokens: List[Tuple[str, float]] = []
 
     if tk is not None:
         # Janome: keep nouns only to avoid noisy particles
@@ -87,7 +105,8 @@ def tokenize_title(title: str, stopwords: Set[str], min_len: int = 2) -> List[st
                 continue
             if w in stopwords:
                 continue
-            tokens.append(w)
+            weight = EN_WEIGHT if _is_english_token(w) else JP_WEIGHT
+            tokens.append((w, weight))
         if tokens:
             return tokens  # Janome succeeded with some tokens
 
@@ -97,14 +116,15 @@ def tokenize_title(title: str, stopwords: Set[str], min_len: int = 2) -> List[st
         w = m.group(0).lower()
         if len(w) < min_len or w in stopwords:
             continue
-        tokens.append(w)
+        tokens.append((w, EN_WEIGHT))
 
     # JP: keep sequences as tokens (coarse, but works without tokenizer)
     for m in _JP_SEQ.finditer(title):
         w = m.group(0)
-        if len(w) < min_len or w in stopwords:
-            continue
-        tokens.append(w)
+        for sub in _split_jp_token(w):
+            if len(sub) < min_len or sub in stopwords:
+                continue
+            tokens.append((sub, JP_WEIGHT))
 
     return tokens
 
@@ -185,8 +205,9 @@ def build_daily_words(
             tokens = tokenize_title(title, stopwords=stopwords, min_len=min_len)
             if not tokens:
                 continue
-            word_count.update(tokens)
-            for w in set(tokens):
+            for w, weight in tokens:
+                word_count[w] += weight
+            for w in {w for w, _ in tokens}:
                 word_articles[w].add(url)
 
         if not word_count:
@@ -201,10 +222,14 @@ def build_daily_words(
                 "count": list(word_count.values()),
                 "article_count": [len(word_articles[w]) for w in word_count.keys()],
             }
-        ).sort_values(["count", "article_count", "word"], ascending=[False, False, True])
+        ).sort_values(
+            ["count", "article_count", "word"], ascending=[False, False, True]
+        )
 
         out_df.to_csv(out_path, index=False, encoding="utf-8")
-        print(f"[OK] wrote: {out_path} (articles={len(url_to_title)}, words={len(out_df)})")
+        print(
+            f"[OK] wrote: {out_path} (articles={len(url_to_title)}, words={len(out_df)})"
+        )
 
 
 def concat_daily_words(daily_dir: str, out_path: str) -> None:
@@ -265,7 +290,10 @@ def build_monthly_words(
             count=("count", "sum"),
             article_count=("article_count", "sum"),
         )
-        .sort_values(["month", "count", "article_count", "word"], ascending=[True, False, False, True])
+        .sort_values(
+            ["month", "count", "article_count", "word"],
+            ascending=[True, False, False, True],
+        )
     )
 
     os.makedirs(out_dir, exist_ok=True)
@@ -309,7 +337,10 @@ def build_yearly_words(
             count=("count", "sum"),
             article_count=("article_count", "sum"),
         )
-        .sort_values(["year", "count", "article_count", "word"], ascending=[True, False, False, True])
+        .sort_values(
+            ["year", "count", "article_count", "word"],
+            ascending=[True, False, False, True],
+        )
     )
 
     os.makedirs(out_dir, exist_ok=True)
@@ -326,9 +357,21 @@ def build_yearly_words(
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--snapshot_dir", default="data/snapshots", help="directory containing snapshot CSVs")
-    ap.add_argument("--daily_dir", default="data/frequencies", help="directory containing daily CSVs")
-    ap.add_argument("--out_path", default="data/frequencies/summary/daily_words_all.csv", help="output CSV path")
+    ap.add_argument(
+        "--snapshot_dir",
+        default="data/snapshots",
+        help="directory containing snapshot CSVs",
+    )
+    ap.add_argument(
+        "--daily_dir",
+        default="data/frequencies",
+        help="directory containing daily CSVs",
+    )
+    ap.add_argument(
+        "--out_path",
+        default="data/frequencies/summary/daily_words_all.csv",
+        help="output CSV path",
+    )
     args = ap.parse_args()
 
     # 1. スナップショットから日次単語CSVを生成（存在する場合）
