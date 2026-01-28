@@ -58,7 +58,13 @@ def make_wordcloud(freq: dict[str, int], font_path: str) -> WordCloud:
     return wc
 
 
-def render_top10_bar(freq: dict[str, int], font_path: str) -> None:
+def render_top10_bar(
+    freq: dict[str, int],
+    font_path: str,
+    *,
+    use_container_width: bool = True,
+    fig_size: tuple[float, float] = (8, 4),
+) -> None:
     if not freq:
         st.info("データがありません。")
         return
@@ -70,7 +76,7 @@ def render_top10_bar(freq: dict[str, int], font_path: str) -> None:
     )
 
     font_prop = font_manager.FontProperties(fname=font_path)
-    fig, ax = plt.subplots(figsize=(8, 4))
+    fig, ax = plt.subplots(figsize=fig_size)
     ax.barh(top10["word"], top10["count"], color="#4C78A8")
     ax.invert_yaxis()
     ax.set_xlabel("出現回数", fontproperties=font_prop)
@@ -78,7 +84,7 @@ def render_top10_bar(freq: dict[str, int], font_path: str) -> None:
     ax.tick_params(axis="y", labelsize=10)
     for label in ax.get_yticklabels():
         label.set_fontproperties(font_prop)
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, use_container_width=use_container_width)
 
 
 # --- UI ---
@@ -206,4 +212,9 @@ if st.session_state.show_compare:
     with right_col:
         render_top10_bar(prev_freq, font_path)
 else:
-    render_top10_bar(current_freq, font_path)
+    render_top10_bar(
+        current_freq,
+        font_path,
+        use_container_width=False,
+        fig_size=(7, 4),
+    )
