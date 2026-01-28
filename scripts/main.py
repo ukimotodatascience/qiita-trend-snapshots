@@ -23,10 +23,15 @@ def find_font_path() -> str | None:
 
 
 @st.cache_data
-def load_freq(csv_path: str) -> dict[str, int]:
+def load_freq(csv_path: str, days: int) -> dict[str, int]:
     df = pd.read_csv(csv_path)
-    # 想定: word, count
-    freq = dict(zip(df["word"].astype(str), df["count"].astype(int)))
+    df["date"] = pd.to_datetime(df["date"])
+    latest_date = df["date"].max()
+    start_date = latest_date - pd.Timedelta(days=days - 1)
+    df = df[df["date"] >= start_date]
+    # 想定: date, word, count
+    grouped = df.groupby("word", as_index=False)["count"].sum()
+    freq = dict(zip(grouped["word"].astype(str), grouped["count"].astype(int)))
     return freq
 
 
@@ -46,6 +51,14 @@ def make_wordcloud(freq: dict[str, int], font_path: str) -> WordCloud:
 st.set_page_config(page_title="WordCloud Viewer", layout="wide")
 st.title("WordCloud（CSVの頻度から生成）")
 
+period_options = {
+    "直近1週間": 7,
+    "直近1カ月": 30,
+    "直近1年": 365,
+}
+period_label = st.radio("期間", list(period_options.keys()), horizontal=True)
+period_days = period_options[period_label]
+
 # CSVパスはコード内で固定（UIには表示しない）
 csv_path = DEFAULT_CSV_PATH
 
@@ -60,7 +73,7 @@ if not Path(csv_path).exists():
     st.error("内部CSVが見つかりません。データ生成処理を確認してください。")
     st.stop()
 
-freq = load_freq(csv_path)
+freq = load_freq(csv_path, period_days)
 
 # WordCloud生成（固定値）
 wc = WordCloud(
