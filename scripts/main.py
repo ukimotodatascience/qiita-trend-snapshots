@@ -37,7 +37,7 @@ def load_freq(
 
 @st.cache_data
 def load_latest_date(csv_path: str) -> pd.Timestamp:
-    df = pd.read_csv(csv_path, usecols=["date"])
+    df = pd.read_csv(csv_path)
     df["date"] = pd.to_datetime(df["date"])
     return df["date"].max()
 
