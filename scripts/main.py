@@ -186,13 +186,13 @@ if st.session_state.show_compare:
         if current_wc is None:
             st.info("現在の期間のデータがありません。")
         else:
-            st.image(current_wc.to_array(), use_container_width=True)
+            st.image(current_wc.to_array(), width=WC_WIDTH)
 
     with right_col:
         if prev_wc is None:
             st.info("前の期間のデータがありません。")
         else:
-            st.image(prev_wc.to_array(), use_container_width=True)
+            st.image(prev_wc.to_array(), width=WC_WIDTH)
 else:
     if current_wc is None:
         st.info("現在の期間のデータがありません。")
@@ -225,7 +225,7 @@ if st.session_state.show_compare:
             dpi=BAR_DPI,
         )
         if fig is not None:
-            st.pyplot(fig, use_container_width=True)
+            st.image(fig_to_png_bytes(fig), width=WC_WIDTH)
     with right_col:
         fig = render_top10_bar(
             prev_freq,
@@ -234,7 +234,7 @@ if st.session_state.show_compare:
             dpi=BAR_DPI,
         )
         if fig is not None:
-            st.pyplot(fig, use_container_width=True)
+            st.image(fig_to_png_bytes(fig), width=WC_WIDTH)
 else:
     fig = render_top10_bar(
         current_freq,
