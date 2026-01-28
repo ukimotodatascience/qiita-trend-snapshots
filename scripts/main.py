@@ -168,3 +168,21 @@ if current_wc is not None:
         file_name="wordcloud.png",
         mime="image/png",
     )
+
+# --- TOP10 横棒グラフ ---
+if current_freq:
+    st.subheader("出現回数TOP10")
+    top10 = (
+        pd.DataFrame(
+            [{"word": word, "count": count} for word, count in current_freq.items()]
+        )
+        .sort_values("count", ascending=False)
+        .head(10)
+    )
+
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.barh(top10["word"], top10["count"], color="#4C78A8")
+    ax.invert_yaxis()
+    ax.set_xlabel("出現回数")
+    ax.set_ylabel("ワード")
+    st.pyplot(fig, use_container_width=True)
