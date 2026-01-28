@@ -36,10 +36,14 @@ def load_freq(
 
 
 @st.cache_data
-def load_latest_date(csv_path: str) -> pd.Timestamp:
+def load_date_range(csv_path: str) -> tuple[pd.Timestamp, pd.Timestamp]:
     df = pd.read_csv(csv_path)
     df["date"] = pd.to_datetime(df["date"])
-    return df["date"].max()
+    return df["date"].min(), df["date"].max()
+
+
+def format_date_range(start: pd.Timestamp, end: pd.Timestamp) -> str:
+    return f"{start.date()} 〜 {end.date()}"
 
 
 def make_wordcloud(freq: dict[str, int], font_path: str) -> WordCloud:
@@ -97,9 +101,9 @@ if not Path(csv_path).exists():
     st.error("内部CSVが見つかりません。データ生成処理を確認してください。")
     st.stop()
 
-latest_date = load_latest_date(csv_path)
-current_start = latest_date - pd.Timedelta(days=period_days - 1)
-current_end = latest_date
+data_start, data_end = load_date_range(csv_path)
+current_start = data_end - pd.Timedelta(days=period_days - 1)
+current_end = data_end
 prev_end = current_start - pd.Timedelta(days=1)
 prev_start = prev_end - pd.Timedelta(days=period_days - 1)
 
@@ -130,10 +134,15 @@ if st.session_state.show_compare and prev_freq:
     ).generate_from_frequencies(prev_freq)
 
 # 表示（matplotlib）
+st.caption(f"データ期間: {format_date_range(data_start, data_end)}")
+
 if st.session_state.show_compare:
     left_col, right_col = st.columns(2)
     with left_col:
-        st.subheader(f"現在の期間: {current_start.date()} 〜 {current_end.date()}")
+        current_range = format_date_range(
+            max(current_start, data_start), min(current_end, data_end)
+        )
+        st.subheader(f"現在の期間: {current_range}")
         if current_wc is None:
             st.info("現在の期間のデータがありません。")
         else:
@@ -143,7 +152,10 @@ if st.session_state.show_compare:
             st.pyplot(fig, clear_figure=True)
 
     with right_col:
-        st.subheader(f"前の期間: {prev_start.date()} 〜 {prev_end.date()}")
+        prev_range = format_date_range(
+            max(prev_start, data_start), min(prev_end, data_end)
+        )
+        st.subheader(f"前の期間: {prev_range}")
         if prev_wc is None:
             st.info("前の期間のデータがありません。")
         else:
@@ -152,7 +164,10 @@ if st.session_state.show_compare:
             plt.axis("off")
             st.pyplot(fig, clear_figure=True)
 else:
-    st.subheader(f"現在の期間: {current_start.date()} 〜 {current_end.date()}")
+    current_range = format_date_range(
+        max(current_start, data_start), min(current_end, data_end)
+    )
+    st.subheader(f"現在の期間: {current_range}")
     if current_wc is None:
         st.info("現在の期間のデータがありません。")
     else:
