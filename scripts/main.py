@@ -120,6 +120,7 @@ if font_path is None:
         "日本語フォントが見つかりませんでした。CANDIDATE_FONTS にフォントパスを追加してください。"
     )
     st.stop()
+assert font_path is not None
 
 if not Path(csv_path).exists():
     st.error("内部CSVが見つかりません。データ生成処理を確認してください。")
