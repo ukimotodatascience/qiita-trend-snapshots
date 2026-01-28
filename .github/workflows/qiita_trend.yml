@@ -2,9 +2,9 @@ name: Fetch Qiita Popular Feed
 
 on:
   schedule:
-    - cron: "0 21 * * *"    # 06:00 JST
+    - cron: "0 21 * * *"  # 06:00 JST
     - cron: "0 9 * * *"   # 18:00 JST
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -22,27 +22,27 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        run: pip install pandas
+
       - name: Run snapshot script
         run: python scripts/fetch_qiita_popular.py
 
-      - name: Commit & push snapshot if created
-        run: |
-          # 新規 or 変更ファイルがあるか確認
-          if [ -n "$(git status --porcelain data/snapshots)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add data/snapshots
-            git commit -m "snapshot: qiita popular feed"
-            git push
-          else
-            echo "No new snapshot. Skipping commit."
-          fi
-
-      - name: Install pandas
-        run: pip install pandas
-
       - name: Run build_daily_word_stats
         run: python scripts/build_daily_word_stats.py
+
+      - name: Commit & push changes if any
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: update qiita snapshots/stats"
+            git pull --rebase
+            git push
+          else
+            echo "No changes. Skipping commit."
+          fi
 
       - name: Notify Discord on failure
         if: failure()
@@ -55,5 +55,5 @@ jobs:
           REF: ${{ github.ref_name }}
         run: |
           RUN_URL="https://github.com/${REPO}/actions/runs/${RUN_ID}"
-          MSG="✖ **Workflow Failed:**\n- repo: ${REPO}\n- workflow: ${WORKFFLOW}\n- branch: ${REF}\n- run: ${RUN_URL}"
-          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"${MSG}\"}" ${{ env.DISCORD_WEBHOOK_URL }}
+          MSG="✖ **Workflow Failed:**\n- repo: ${REPO}\n- workflow: ${WORKFLOW}\n- branch: ${REF}\n- run: ${RUN_URL}"
+          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"${MSG}\"}" "$DISCORD_WEBHOOK_URL"
