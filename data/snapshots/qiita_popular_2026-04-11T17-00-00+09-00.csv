@@ -1,0 +1,31 @@
+feed_updated_at,title,url
+2026-04-11T17:00:00+09:00,日本発、LLMの推論を「桁違い」に効率化する新アーキテクチャ「PHOTON」の論文が面白かったのでまとめてみた,https://qiita.com/yuji-arakawa/items/2ad0240c56eb7507b261?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,“書けるだけ”じゃ足りない。今どきエンジニアに必要なスキルの話,https://qiita.com/prum_hitomi/items/79f74ec8cd016172619b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,マークダウン記法は奥深く、楽しい — テキストだけで「伝わるドキュメント」を作る技術,https://qiita.com/teppei19980914/items/36404f9ec9c786cde671?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,【35歳未経験でも理解できた】Web API,https://qiita.com/wata-sho/items/d3f222758833cb694672?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,エンジニア歴20年の私が、素人バイブコーディング勢に物申す,https://qiita.com/Akira-Isegawa/items/00f23d206c504db2ac3b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,脱・セキュリティ初心者。現場の信頼を勝ち取るための「3つの原則」と「1つの習慣」,https://qiita.com/masa20057/items/be5d46e82f7301747e86?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,障害調査中にviewコマンドで巨大ログを開いてアプリを全停止させたお話,https://qiita.com/km23/items/a9d75de3677bdd22dced?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,バックエンドをLambdaにするかECS（Fargate）にするかの判断基準,https://qiita.com/teshimaaaaa1101/items/61ab31dc9d43d533de38?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,DI教えようとしたら難しすぎたので整理した,https://qiita.com/wataru-nakamura6/items/72c046eb11eb0eedec22?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,n8nで「三権分立AIエージェント」を構築したら、寝ている間にバグのないコードが勝手に完成した話,https://qiita.com/YushiYamamoto/items/9a53b6f957f809089881?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,MCP vs Skills論争に決着をつける試み。AIエージェントの「拡張手段」を実装・設計・セキュリティで徹底比較する,https://qiita.com/miruky/items/32314a0d9eb8c154dc95?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,AIエージェントの仕組みと振る舞いを整理してみた,https://qiita.com/aito1234/items/d7003fc8f8941f886caf?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,【Git】実務で使うGitブランチ運用ルールまとめ,https://qiita.com/yuto-vj/items/9fea43402728d5e4d9de?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,Unityメモリ＆GCの完全理解,https://qiita.com/nekoya404/items/1ba7c598ef69b5595de5?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,5年間で凝り固まったRDB脳をNoSQLに順応させる〜DynamoDB入門〜,https://qiita.com/miriwo/items/1063cd9368e00ad1a006?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,【必須】GitHubとnpmで脆弱なパッケージを入れないための防御設定 8選,https://qiita.com/miruky/items/fcab851c5351f79b481d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,codex cliで700GB超になったWSL2環境をDev Drive (ReFS) に移行した話,https://qiita.com/ootakazuhiko/items/97f9040c529b553dec67?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,【Git】実務でよくあるGitエラーと対処法まとめ,https://qiita.com/yuto-vj/items/402d4a9c414354220ba3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,Javaの例外処理を正しく理解する — 検査例外・非検査例外・throwsの使いどころ,https://qiita.com/S_kamon/items/231a8cdee9dc01d45ed9?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,TypeScript における any と unknown の使い分け,https://qiita.com/ryo_sh/items/8c5953b7c9d11979b320?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,Claudeの概要と設計思想から学んだこと,https://qiita.com/aito1234/items/c3ef3c71aad13fc78daf?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,【35歳未経験でも理解できた】SPAへの進化,https://qiita.com/wata-sho/items/e38b3523685367108b68?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,ローカル LLM で AI コーディング支援環境を構築する①,https://qiita.com/koutaro_harada/items/d45e346f099af9b9a9c8?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,Reactのレンダリングの仕組みを整理する,https://qiita.com/ryo_sh/items/8f597aae36ee0b2fa10f?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,【n8n】毎朝7時にQiita人気記事TOP5をLINEに自動通知する仕組みを作ってみた,https://qiita.com/wan-code/items/fbca13aa136ed9f76979?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,"""再発明された車輪""をメンテナンスする羽目になったお話",https://qiita.com/km23/items/93d6ead5df3303e2df17?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,C# で始める Entity Framework 入門,https://qiita.com/hiroki_notes/items/ade3a52725919bf86c99?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,初心者でもわかる！ Python で学ぶマクロ経済学入門 全70回 総復習,https://qiita.com/maskot1977/items/36a9458ee2b8bbb62794?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,【Git】実務で使うPull Request運用ルールまとめ,https://qiita.com/yuto-vj/items/9631a596b5590e9ee7b8?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-04-11T17:00:00+09:00,equals()とhashCode()をオーバーライドしないと何が起きるか,https://qiita.com/S_kamon/items/e80c066455beca2e344e?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
