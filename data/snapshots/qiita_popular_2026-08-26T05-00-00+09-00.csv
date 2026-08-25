@@ -1,0 +1,31 @@
+feed_updated_at,title,url
+2026-08-26T05:00:00+09:00,【ローカルLLM】国産LLM「LLM-jp-4-33B」と「Qwen3.8-27B」の推論性能比較（RTX 5070 Ti + RTX 3070 Ti）,https://qiita.com/h-nabata/items/b80484406e839ee6507b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,元ヤフーエンジニア社長が考える、AI時代のエンジニアに必要な3つのスキル,https://qiita.com/ryoheiiwamoto/items/5f21adcca8aff1b0357a?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,文系上司が知りたいのは「仕組み」ではなく、「どう影響するか」のことが多い,https://qiita.com/sumomoo/items/4912f4efa2e2a5cd49d5?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,新人エンジニア、先輩ごとに言う内容が違って「何が正解かわからない」,https://qiita.com/prumnn/items/001b49e080f580aea96b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,プロも毎日ググっている。エラーで固まらないための「検索力」の話,https://qiita.com/m__ikeda/items/5da484e533d0d574045d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,/model を1度でも押すと ANTHROPIC_DEFAULT_MODEL は効きません,https://qiita.com/jqit_suwa/items/7ecdfc6067e09aed00a1?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,AIにテストを書かせると、決まって同じ場所が抜ける,https://qiita.com/jqit_suwa/items/a0fa9752528e2b3def71?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,※この記事は人の手で書かれています,https://qiita.com/kyuko/items/3380b85d0b52ea01f449?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,Oracle AI Database Private Agent Factory 26.4 を 26.7 へ Upgrade してみてみた,https://qiita.com/shirok/items/de8732a3d1ebc441af10?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,BrunoでAPIテストを自動化してみよう― Postmanのコレクションをそのままgit管理し、Cursor(AIエージェント)のターミナルでCIまで回す,https://qiita.com/sewiihidekikudo/items/1c835d5d1f0a8b3dbf65?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,新人エンジニア、「言いたいことがある」がいつも遅すぎる,https://qiita.com/prumnn/items/15c75c024c4b38011afd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,【2026年8月調査】「APIあります」の実態を調べてみた｜日本の業務システム56件を2軸（公開度 × 契約条件）で分類した,https://qiita.com/songchong/items/aba1d118446e00cef5ae?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,「テスト自動化したいけど、何から始める？」を手探りで進めた記録,https://qiita.com/yo-hirota-gxp/items/5f10aa17a4851eba222b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る,https://qiita.com/sumomoo/items/e5065bd0e6daaf38ac62?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,候補者のコードがAI製か見抜けなくなったので、「AI禁止」のコーディングテストをやめたい,https://qiita.com/kskg4/items/d4f6eba82ea6df36f8c3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,環境変数管理(.env)の基礎とベストプラクティス：なぜ設定値をコードから分離するのか,https://qiita.com/itstar_lab/items/110be4c05d296360ec6c?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,Google Antigravity for Visual Studio Code in GitHub Codespacesが便利すぎる件【サンドボックス / 脱GitHub Copilot】,https://qiita.com/yangguofu/items/ae3e9f9f0f5a4515f276?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,【JavaScript】Promise.all()をハッシュで受け取れるようになる,https://qiita.com/rana_kualu/items/99daf86aff272a9671fc?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,【備忘録・初学者向け】聞きたいけど恥ずかしくて聞けないコマンドの話,https://qiita.com/Tatooo/items/efa52e124c1b4ef3dbff?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,AI時代だからこそ、ソフトウェア開発の体系的な理解が必要になる。「動くコード」と「正しいソフトウェア」を分ける7つの観点,https://qiita.com/nogataka/items/272a9020c2d7da0d3373?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,「両方にAPIがあれば繋がる」は本当か調べてみた｜純正連携・iPaaS とデータ変換の話,https://qiita.com/songchong/items/0788ebd25ea6400df81e?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,システム設計視点の行動経済学 全20回 総復習,https://qiita.com/maskot1977/items/1e622d7e41f209016b5f?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,AIで一人でゲームを作れるか試したら、35日・実質8人日でApp Store審査まで行った,https://qiita.com/notfolder/items/a56620e85ac40248f55f?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,AIエージェント初心者がポケカの知識を使ってルールベースAIを改善してみた,https://qiita.com/taku_life/items/9c0afb8d6bbea534f7dc?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,【AgentCore】Runtime の命名で混乱したのでルールを整理する,https://qiita.com/ryu-ki/items/d345d6ce05f0e5d9436a?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,SSM Parameter Storeの「分け方」と「Standard / Advanced」の決め方 — ECSとLambdaで変わる制約を実測して整理した,https://qiita.com/Omizu-25/items/41d5edd295915c8b6908?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,ExaDB-XSの新機能「Automatic Failover(FSFO)」を試す - その2：フェイルオーバー,https://qiita.com/mo__mo/items/85c583d0a2f0350d28ed?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,New Relic アップデート(2026年7月),https://qiita.com/nr-mito/items/20d4b104679227ff4314?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,Llamex Luna版をLivebookで動かす 〜 Nxなしの推論経路をAtomVMへ持ち込む,https://qiita.com/RyoWakabayashi/items/42fc6480be3fd99aecd1?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-26T05:00:00+09:00,【AIエージェント初心者向け】Codex CLI、どこまでやってくれる？Java開発環境をゼロから作ってみた,https://qiita.com/hashiryu_/items/1e4e49b69f18f35a13c2?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
