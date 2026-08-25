@@ -1,0 +1,31 @@
+feed_updated_at,title,url
+2026-08-25T17:00:00+09:00,元ヤフーエンジニア社長が考える、AI時代のエンジニアに必要な3つのスキル,https://qiita.com/ryoheiiwamoto/items/5f21adcca8aff1b0357a?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,個人開発をiOSアプリで半年やって「勝てない」と悟った話,https://qiita.com/gts/items/8c94ac8b76d7caa1b530?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,【ローカルLLM】国産LLM「LLM-jp-4-33B」と「Qwen3.8-27B」の推論性能比較（RTX 5070 Ti + RTX 3070 Ti）,https://qiita.com/h-nabata/items/b80484406e839ee6507b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,新人エンジニア、「言いたいことがある」がいつも遅すぎる,https://qiita.com/prumnn/items/15c75c024c4b38011afd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,入社1ヶ月目、「全然役に立てていない」と焦るときに考えてほしいこと,https://qiita.com/m__ikeda/items/caac6a305b6f190676da?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る,https://qiita.com/sumomoo/items/e5065bd0e6daaf38ac62?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,/model を1度でも押すと ANTHROPIC_DEFAULT_MODEL は効きません,https://qiita.com/jqit_suwa/items/7ecdfc6067e09aed00a1?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,Grill-me に丸コゲにされた俺は、もっと軽くて速いスキルを作った,https://qiita.com/magicant/items/0f93dd0b38fda076174f?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,anthropic SDK が httpx をやめました。移行しても動くので気づけません,https://qiita.com/jqit_suwa/items/5edf6037203a15c3fdfd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,AIにテストを書かせると、決まって同じ場所が抜ける,https://qiita.com/jqit_suwa/items/a0fa9752528e2b3def71?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,※この記事は人の手で書かれています,https://qiita.com/kyuko/items/3380b85d0b52ea01f449?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,WSL2 + Tailscale で、外出先から使える Linux ライクな GPU サーバーを作る,https://qiita.com/atsushi11o7/items/47bb5ed5f9c8dc3095f4?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,Oracle AI Database Private Agent Factory 26.4 を 26.7 へ Upgrade してみてみた,https://qiita.com/shirok/items/de8732a3d1ebc441af10?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,システム設計視点の行動経済学 全20回 総復習,https://qiita.com/maskot1977/items/1e622d7e41f209016b5f?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,BrunoでAPIテストを自動化してみよう― Postmanのコレクションをそのままgit管理し、Cursor(AIエージェント)のターミナルでCIまで回す,https://qiita.com/sewiihidekikudo/items/1c835d5d1f0a8b3dbf65?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,【2026年8月調査】「APIあります」の実態を調べてみた｜日本の業務システム56件を2軸（公開度 × 契約条件）で分類した,https://qiita.com/songchong/items/aba1d118446e00cef5ae?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,環境変数管理(.env)の基礎とベストプラクティス：なぜ設定値をコードから分離するのか,https://qiita.com/itstar_lab/items/110be4c05d296360ec6c?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,APIとは何か調べてみた｜REST・SOAP・JSON・XML・CRUD…用語を業務の言葉に置き換える,https://qiita.com/songchong/items/4b1502b6bcc69c459baa?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,【AIエージェント初心者向け】Codex CLI、どこまでやってくれる？Java開発環境をゼロから作ってみた,https://qiita.com/hashiryu_/items/1e4e49b69f18f35a13c2?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,候補者のコードがAI製か見抜けなくなったので、「AI禁止」のコーディングテストをやめたい,https://qiita.com/kskg4/items/d4f6eba82ea6df36f8c3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,セキュリティキャンプ2026 L2 プロセッサゼミ参加記,https://qiita.com/Latte72R/items/49c5f37e78d6eb59d582?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,【cdkd(CDK Direct)】CloudFormationを経由しないCDKデプロイ!? cdkdによる高速デプロイを試してみた！,https://qiita.com/yosuke-suzuki/items/e6970d4882b064216ee9?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,Claude Codeのセッション間通信、Windowsでも動きます（v2.1.234から）,https://qiita.com/jqit_suwa/items/137a2810fb3fa3f773e8?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,【備忘録・初学者向け】聞きたいけど恥ずかしくて聞けないコマンドの話,https://qiita.com/Tatooo/items/efa52e124c1b4ef3dbff?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,RAG構築の壁を越える！ローカル×クラウドのハイブリッド構成とコスト戦略,https://qiita.com/DaokFrontier/items/57251063ea93f1f3d40e?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,AIに数学採点させる！さくらのAI Engineで自動採点できる数学演習アプリを作った,https://qiita.com/azubiwa/items/b8ab8457b7c9ecc05018?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,AIで一人でゲームを作れるか試したら、35日・実質8人日でApp Store審査まで行った,https://qiita.com/notfolder/items/a56620e85ac40248f55f?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,お金さえ払えば、Claude Codeは最大2.5倍速くなる──従量課金の「/fast」を調べてみた,https://qiita.com/inoyu-qiita/items/1cf056e4c4210f0643fd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,AI時代だからこそ、ソフトウェア開発の体系的な理解が必要になる。「動くコード」と「正しいソフトウェア」を分ける7つの観点,https://qiita.com/nogataka/items/272a9020c2d7da0d3373?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-08-25T17:00:00+09:00,【JavaScript】Promise.all()をハッシュで受け取れるようになる,https://qiita.com/rana_kualu/items/99daf86aff272a9671fc?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
