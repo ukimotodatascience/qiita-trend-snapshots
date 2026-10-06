@@ -1,0 +1,31 @@
+feed_updated_at,title,url
+2026-10-06T05:00:00+09:00,文章で要件定義するのをやめた。AIでモックを先に作ったら、認識ズレが実装前に全部見つかった,https://qiita.com/kazuki_ogawa/items/f1a15a199d9f91fe6080?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,最近プロジェクトマネジメントで感じたこと,https://qiita.com/shirakurak/items/ee7565d212fd3ae1adcb?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,AI エージェントに API キーを渡しても大丈夫か？ 対話文・.env・環境変数・MCP・OAuth — 6 つの渡し方を Claude Code・Codex・Gemini CLI・Copilot・Cursor で調べてみた,https://qiita.com/songchong/items/873b4f14d26296176cfd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,結局、Looped Transformerってなんや？,https://qiita.com/sakai1250/items/8d90b7320bcd1c8aba9e?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,"API キーはどこから漏れるのか？ 自分のサイトに来た .env 探し 1,566 件と、公開事例を 7 つの経路に分けてみた",https://qiita.com/songchong/items/02672765fe53f911a1a0?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,新しく作ったファイルに、そのフォルダの CLAUDE.md は効いていなかった。直った今も指示は書いた後に届く,https://qiita.com/suwa_nobu/items/5252da854dbebe02cccc?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,RAG構築が一気に簡単に？Oracle Private Agent Factory のKnowledge Agent Nodeを試してみた,https://qiita.com/ssfujita/items/8be112a1d43ab25f0cd9?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,【SELECT AIの精度が出ない時に試したい5つのポイント】②SELECT AIにDBの意味を教える,https://qiita.com/KantaUeda/items/beace142afd1d8f427f6?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,「議論できる国民」になるために何を知るべきか ― 育成就労制度から考える政策デバッグと国家レジリエンス : システム設計視点の行動経済学 (36),https://qiita.com/maskot1977/items/9fefd19cca44838e999c?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,【速報】Gemini 4 Argon 登場！公式データで見る“長時間働くAI”の現在地,https://qiita.com/tomokoro/items/69f8d2f1a3504927b6c7?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,Rust 1.99が来たので、実務で使えそうな変更と気をつけたいところを拾ってみる,https://qiita.com/DwarfM42/items/b4a78fdbf38129ee2fcd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,AI が正しい答えを返せる時代に、人は何を学ぶのか。対話と問題解決の経験から教育を考えてみる,https://qiita.com/Takashi_Masumori/items/a1bb51f402a5f95c396b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,「シークレットスキャン」とは？漏れた API キー、誰が止めてくれるのか？ 業務システム 65 件と GitHub・GitLab を調べてみた,https://qiita.com/songchong/items/5ee39ef5b71510e36c2a?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,正解のないKiro Skillsをチームでどう育てるか,https://qiita.com/CEC_Cloud_Community/items/35b6df6caeda750d863a?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,【Db2 Genius Hub】導入前に知っておきたいサイジングの考え方 ～実環境から見積もってみた～,https://qiita.com/ISE_Db2LUW_Club/items/18b8bb948847ccfbc93a?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,大容量のカスタムイメージのインポート・エクスポートをしてみる。,https://qiita.com/tkonishi/items/4ebce01f830297c00d57?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,LLM-as-a-Collaborator入門：AIを「回答者」ではなく共同設計者として使う,https://qiita.com/mellowlaunch/items/384021f3e015945fe29d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,2026年10月5日 今日のQiitaトレンド記事をポッドキャストで聴こう！,https://qiita.com/ennagara128/items/13be43e39ee6864d7105?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,最近サイバー攻撃多いから、基本対策を見直そう,https://qiita.com/HIsui0921/items/65fba77555a13af6b8a5?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,エイリアスを設定したのにVS Codeでジャンプできなかった原因,https://qiita.com/watanabe_trtr/items/c622860ff50e0d7d0b65?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,「実装に問題が無いか調査して」は意味が無い?　AIレビューが空振りする理由と効果的な指示のテンプレ,https://qiita.com/nolanlover0527/items/2e4e3322c5c36545a246?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,Vitestで 関数またはメソッド toBeInTheDocument() は未解決です,https://qiita.com/J-T_ky2g/items/6df712d6eff81c71d4fd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,ESLint: 'expect' is not defined. (no-undef),https://qiita.com/J-T_ky2g/items/23e4abab5738c4d0603d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,BEエンジニアがなんであんなにチクチクした言い回しでムカつくのかを言語化してみた💢,https://qiita.com/jota9613/items/6633e8618d8427e412c6?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,Claudeで日本語スキルを使うよりもGemini使ったほうが早いなって思った話,https://qiita.com/ku_suke/items/73897fccd97f931deb09?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,Redisでポケモン図鑑のAPI呼び出しをキャッシュしたら、1000件取得が5.29秒から0.64秒になった【React/Hono/PokéAPI/Redis/Docker】,https://qiita.com/keikeigo/items/160eb2d62d294a07f573?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,【入社エントリ】入社して2ヶ月を振り返ってみた,https://qiita.com/sc-hagiwara/items/c53feb758b5aff3664c3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,仕事が忙しいので、プライベートに AI 秘書を雇ってみた,https://qiita.com/araom/items/83f8180524500f685416?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,AIが企画構想をご提案して自力完成 日本語プログラミング言語Mind９GUIミニゲームアプリ（後編）,https://qiita.com/mylifewithviolin/items/2636e56ef0d0cbc46f0d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-06T05:00:00+09:00,MVPから実際に使いやすいポートフォリオへ｜開発で学んだこと,https://qiita.com/fighthinako/items/9deb4bbaa452926a83c0?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
