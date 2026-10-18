@@ -1,0 +1,31 @@
+feed_updated_at,title,url
+2026-10-19T05:00:00+09:00,CVE-2026-99999（PwnEscape）を読み解く──「KVMの脆弱性」ではなく、Linuxネットワークスタックの脆弱性,https://qiita.com/k2_naka/items/fa87685231377f15e7e3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,【2026年版】今日から使える AI との会話術 — Claude・Gemini・Codex に指示を守らせる 6 つの原則,https://qiita.com/songchong/items/351a939e2e1b673c2929?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,重要な指示は最初か最後か？ AI 大手 3 社の助言が異なるので、資料→命令→指示の並び方を 8 通り試してみた,https://qiita.com/songchong/items/542892c6d4c569c9c15f?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る,https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Claude Codeの.envを読ませない設定がどこまで効くのか試してみた,https://qiita.com/yakumo_09/items/5a86ca330b449db0e6bc?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,GitHubに競プロライブラリを保管したい！を叶える備忘録,https://qiita.com/Un_titled/items/a8620f54cf953ad67365?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,テーブル定義書・ER図を自動生成して、AIにテーブル構造を答えさせるツールを作ってみた,https://qiita.com/ebichan_88/items/f7c44c74e437875b1399?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,件数が少ないうちは眠る安全装置が、32日目に目を覚ました 〜Claude Codeと作った「実測勝率ゲート」と、ラベルと実装の食い違い〜,https://qiita.com/charge0315/items/9a4f9d6a373a18e0cd13?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Lambdaが3種類になったみたいなので、全部試してみた,https://qiita.com/maeda-kazutoshi/items/4674e080c2ce3d53c809?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,async/await と Promise(then) の違いを、出力順で比べてみた,https://qiita.com/mmsbox/items/e1a201822b51b753e2ca?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,chakra-ui v3ではuseDisclosureを使わずDrawerを制御する,https://qiita.com/J-T_ky2g/items/49976b1033f985cd2e5b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,【Vite】ビルド時に出た Error: Cannot find native binding. npm has a bug related to optional dependenciesを解決,https://qiita.com/ryu0947/items/03af280e053c5d967168?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,注文管理システムから学ぶセキュリティ対策「アクセス制御編」,https://qiita.com/gensan64311466/items/df213de955d55a1c102d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Power BI での色々な通知方法について：サブスクリプション、アラート、クラウドフロー連携,https://qiita.com/eigogakuto/items/a9615d398034395339ef?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,👀 ひとつで、セキュリティ調査が走り出す——Sysdig Secure のリアルタイム脅威検知におけるインシデントレスポンスを、Factory の Droid で自動化して自宅ラボで試してみた,https://qiita.com/takao-shimizu/items/65f233bb8043c0f102e6?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Claude Code でメモアプリを作って Microsoft Store に公開するまでにやった工夫,https://qiita.com/morststs/items/246bdb871fef835a77a2?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,最近仕事で心がけていること,https://qiita.com/scythercas/items/2195b93fd942409580b5?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）,https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,2026年10月17日 今日のQiitaトレンド記事をポッドキャストで聴こう！,https://qiita.com/ennagara128/items/ddb56dacfd42bb5d6f28?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,hook で Claude Code に .env や鍵ファイルを消させない,https://qiita.com/Oskra/items/da16b717fc931a6423e6?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Gemini4がリリースされて、プロジェクトの運用方法を変えた話,https://qiita.com/SolitaireEgg/items/820295021d314f050ec1?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,【Node.js × Supabase × Vercel】匿名お悩み共感ボード「Moyan」をClaude Codeとゼロから1時間で作って公開した,https://qiita.com/mnoguchi/items/8ca703ba0b45078c7472?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Entra ID で AI エージェントに ID を持たせよう！ ～ Foundry × Claude で検証（その1）,https://qiita.com/shou-wordwright555501/items/b4e0ad709b882ed4ad44?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Rust 1.99.1公開、FFIのbool戻り値問題が修正されました,https://qiita.com/DwarfM42/items/4a7929f8912ae9aaca77?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,CloudWatchだけで「平日8:00～20:00」のEC2死活監視を実現してみた,https://qiita.com/RioTakasu/items/2af5fbe164ef83ddbfda?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,伸びる動画の特徴をAIに言語化させたら、リール作りが回り始めた話,https://qiita.com/Eitaro_dotlog/items/c1e2f6d696ea88854186?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,フレームワークが動くのを待つな、FSDPを書け — リリース8日後に397B MoEを学習した基盤を全公開,https://qiita.com/katsuki_ono/items/e656aa1c7e7d70f4a1cd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Claude Code の1応答あたりの文脈を476kから115kへ ― handoff → /clear → pickup と「判断役に読ませない」の実測,https://qiita.com/kotaro_ai_lab/items/7d8a1264b227f2ccef29?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Next.js + microCMS + Vercel でポートフォリオサイトを作った記録,https://qiita.com/mikanorm39/items/9af2a81651d6c5acb201?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T05:00:00+09:00,Claude Code に頼んで消したファイルは、/rewind で戻らなかった。見分け方はメニューの「No code changes」,https://qiita.com/suwa_nobu/items/18c8456c7a594b24a737?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
