@@ -1,0 +1,31 @@
+feed_updated_at,title,url
+2026-10-18T17:00:00+09:00,CVE-2026-99999（PwnEscape）を読み解く──「KVMの脆弱性」ではなく、Linuxネットワークスタックの脆弱性,https://qiita.com/k2_naka/items/fa87685231377f15e7e3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,Jevにウォーリーを探させたら0.4秒で見つけやがった!!,https://qiita.com/kikuziro/items/c1b47d4bfaa64960ca18?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,GitHubに競プロライブラリを保管したい！を叶える備忘録,https://qiita.com/Un_titled/items/a8620f54cf953ad67365?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る,https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,伸びる動画の特徴をAIに言語化させたら、リール作りが回り始めた話,https://qiita.com/Eitaro_dotlog/items/c1e2f6d696ea88854186?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,Claude Code でメモアプリを作って Microsoft Store に公開するまでにやった工夫,https://qiita.com/morststs/items/246bdb871fef835a77a2?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,テーブル定義書・ER図を自動生成して、AIにテーブル構造を答えさせるツールを作ってみた,https://qiita.com/ebichan_88/items/f7c44c74e437875b1399?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,件数が少ないうちは眠る安全装置が、32日目に目を覚ました 〜Claude Codeと作った「実測勝率ゲート」と、ラベルと実装の食い違い〜,https://qiita.com/charge0315/items/9a4f9d6a373a18e0cd13?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,【Node.js × Supabase × Vercel】匿名お悩み共感ボード「Moyan」をClaude Codeとゼロから1時間で作って公開した,https://qiita.com/mnoguchi/items/8ca703ba0b45078c7472?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,Entra ID で AI エージェントに ID を持たせよう！ ～ Foundry × Claude で検証（その1）,https://qiita.com/shou-wordwright555501/items/b4e0ad709b882ed4ad44?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,Power BI での色々な通知方法について：サブスクリプション、アラート、クラウドフロー連携,https://qiita.com/eigogakuto/items/a9615d398034395339ef?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,Pythonのargparseを触ってみた,https://qiita.com/Hiroki1928/items/6e1b3382ae27ec02c203?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,Gemini 4 Argonの100万トークンは何がすごい？仕様・料金・制限を公式情報から整理してみた,https://qiita.com/YuukiYoshida/items/78a045f37dd8a8a2870d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,弾幕シューティングゲームを Microsoft-Decision-1 にやらせてみた,https://qiita.com/shyamagu/items/b0801dc6016e700d2d61?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,Codingame Summer Challenge 2026 で24位になりContests部門Top10入りしました,https://qiita.com/viewlagoon/items/7df75ea960bb68d8a579?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,スキーマを変えるとプロンプトキャッシュが共有されなかったので、Bedrock の構造化出力をやめた話（2026年版）,https://qiita.com/ntaka329/items/9ddba124de03b15166c4?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,VS Codeの更新を月1回振り返る[第1回：週次リリース開始から2026年10月まで],https://qiita.com/pmc-ko/items/eae66c6623b26e3c30cc?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,注文管理システムから学ぶセキュリティ対策「アクセス制御編」,https://qiita.com/gensan64311466/items/df213de955d55a1c102d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,【Hack The Box】Writeup: MonitorsFour,https://qiita.com/utah_T/items/d4ba7014fe798f1a81cb?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,フレームワークが動くのを待つな、FSDPを書け — リリース8日後に397B MoEを学習した基盤を全公開,https://qiita.com/katsuki_ono/items/e656aa1c7e7d70f4a1cd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,ASP.NET CoreとSource Generatorでポリシーベースの権限管理を楽に実装できるようにしてみた,https://qiita.com/omt_teruki/items/27f7bacee43205e28f11?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,SyntaxError: The requested module 'node:util' does not provide an export named 'styleText'を解決した手順,https://qiita.com/ryu0947/items/a9bcd17b193ba1e3f875?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,"[MISSING_EXPORT] ""forwardRef"" is not exported by ""node_modules/@chakra-ui/react/dist/esm/index.js"". ╭─[ node_modules/@chakra-ui/icons/dist/esm/Spinner.mjs:2:10 ]",https://qiita.com/J-T_ky2g/items/02080316aaa1ab8f7d91?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,DDDにおけるコアドメインについて,https://qiita.com/o68606007/items/52aefff68f2eefa8e6f1?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,chakra-uiの `<Link>` コンポーネントに親の文字色が適用されない,https://qiita.com/J-T_ky2g/items/02ef9494f0092cefaa99?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,react-routerでのネストされたルーティング定義がうまくいかない,https://qiita.com/J-T_ky2g/items/78e0d227261839c6e611?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,【すごいHaskellたのしく学ぼう!】を読んだ,https://qiita.com/sigma_devsecops/items/1d1190050012a058f1fb?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,その中間テーブル、本当に必要？Power BIの容量を大きく削減できた話,https://qiita.com/nktm0511/items/feacdace980313a4f432?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,PowerVS IBM i 日記(116): Power11のオーダー時にはモデルではなく「 Power11」を選択．TOK04･OSA21ではS1122の制限を超えないように自分で管理,https://qiita.com/6onoda/items/e08921d199cdf2f75fa9?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-18T17:00:00+09:00,DynamoDB の S3 エクスポートにフィルターが来た！特定データだけ切り出して新テーブルを作る,https://qiita.com/s_moriyama/items/a3336c72f1f4e81744c5?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
