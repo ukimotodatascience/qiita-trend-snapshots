@@ -1,0 +1,31 @@
+feed_updated_at,title,url
+2026-10-19T17:00:00+09:00,Claude Code × Figma MCP で作ったデザインを別のAIに検査させる — デザインのグラフエンジニアリング,https://qiita.com/vivi-koh/items/fc957950ba9fd21c1d1b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,CVE-2026-99999（PwnEscape）を読み解く──「KVMの脆弱性」ではなく、Linuxネットワークスタックの脆弱性,https://qiita.com/k2_naka/items/fa87685231377f15e7e3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,今日から使える AI との会話術 — Claude・Gemini・Codex に指示を守らせる 6 つの原則【2026年版】,https://qiita.com/songchong/items/351a939e2e1b673c2929?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,重要な指示は最初か最後か？ AI 大手 3 社の助言が異なるので、資料→命令→指示の並び方を 8 通り試してみた,https://qiita.com/songchong/items/542892c6d4c569c9c15f?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,Claude Codeの.envを読ませない設定がどこまで効くのか試してみた,https://qiita.com/yakumo_09/items/5a86ca330b449db0e6bc?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,AIが書いた139件のテストは本当に別物か、Vitestの重複を静的解析で調べた,https://qiita.com/figueiredoluiz/items/9dae44b202aec123d7c4?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,テーブル定義書・ER図を自動生成して、AIにテーブル構造を答えさせるツールを作ってみた,https://qiita.com/ebichan_88/items/f7c44c74e437875b1399?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,耳で聞く！Python で学ぶ マクロ経済学 入門 全20回総復習,https://qiita.com/maskot1977/items/29727d2fa13d667b0ebf?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,AIは言葉も料理も理解していない？ - 近年の画像生成AI -,https://qiita.com/kimuchi_a/items/37240598b04880367088?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,PostgreSQLで遅いSQLの実行計画を自動で取得しNew Relicで確認する - auto_explainの活用方法,https://qiita.com/kobadain/items/e57c61375be6006dfe27?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,「自己責任」というバグを解体する ― 格差・貧困の制度設計 : システム設計視点の行動経済学 (43),https://qiita.com/maskot1977/items/46f195e11ba752a3a4e5?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,ログ調査のたびに検索→前後確認→コピーを繰り返すのがつらくて、VS Code拡張機能を作ってみた,https://qiita.com/shinkai_/items/6e98d6ea443377e763f5?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,GitHubに競プロライブラリを保管したい！を叶える備忘録,https://qiita.com/Un_titled/items/a8620f54cf953ad67365?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,async/await と Promise(then) の違いを、出力順で比べてみた,https://qiita.com/mmsbox/items/e1a201822b51b753e2ca?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,2026年10月17日 今日のQiitaトレンド記事をポッドキャストで聴こう！,https://qiita.com/ennagara128/items/ddb56dacfd42bb5d6f28?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る,https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,Pythonのargparseを触ってみた,https://qiita.com/Hiroki1928/items/6e1b3382ae27ec02c203?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,Lambdaが3種類になったみたいなので、全部試してみた,https://qiita.com/maeda-kazutoshi/items/4674e080c2ce3d53c809?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,Gitで最新コミットにtagをつけてpushする,https://qiita.com/J-T_ky2g/items/84cf31260de8026ebb41?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,chakra-ui v3ではuseDisclosureを使わずDrawerを制御する,https://qiita.com/J-T_ky2g/items/49976b1033f985cd2e5b?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,【JISSEN】セキュリティ勉強会のアウトプット,https://qiita.com/J-T_ky2g/items/9d6f381b5f38cbc071d0?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,ハルシネーション０のWeb検索ツール Eikos-search を公開しました,https://qiita.com/Mas-sensyn/items/f3c283fbb0b09fc33427?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,【Vite】ビルド時に出た Error: Cannot find native binding. npm has a bug related to optional dependenciesを解決,https://qiita.com/ryu0947/items/03af280e053c5d967168?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,フレームワークが動くのを待つな、FSDPを書け — リリース8日後に397B MoEを学習した基盤を全公開,https://qiita.com/katsuki_ono/items/e656aa1c7e7d70f4a1cd?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,2026年10月18日 今日のQiitaトレンド記事をポッドキャストで聴こう！,https://qiita.com/ennagara128/items/4d32cc3c97211581c01c?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,Gemini4がリリースされて、プロジェクトの運用方法を変えた話,https://qiita.com/SolitaireEgg/items/820295021d314f050ec1?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,【Rails初学者向け】このコード何が間違っている？ 〜 理解度を試す10個の問題 〜,https://qiita.com/uokun32/items/e1f0f8c746318ec69d2d?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,請求書データをサーバーに保存せず、URLハッシュだけで共有する実装（Cloudflare Pages）,https://qiita.com/saneatsu-designs/items/251e881136438de608ae?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,2026年10月19日 今日のQiitaトレンド記事をポッドキャストで聴こう！,https://qiita.com/ennagara128/items/0ebdbae4a3be93e41020?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
+2026-10-19T17:00:00+09:00,Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）,https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items
